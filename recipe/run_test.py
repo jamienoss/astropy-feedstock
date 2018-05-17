@@ -4,6 +4,9 @@ import astropy._erfa._core
 from astropy.convolution.convolve import _convolveNd_boundary_none_c
 from astropy.convolution.convolve import _convolveNd_padded_boundary_c
 
+from astropy.openmp_enabled import is_openmp_enabled
+assert(is_openmp_enabled())
+
 import astropy.cosmology.scalar_inv_efuncs
 import astropy.io.ascii.cparser
 import astropy.io.fits.compression

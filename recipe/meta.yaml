@@ -30,12 +30,19 @@ requirements:
     - numpy 1.11.*  # [py36]
     - jinja2
     - cython
+    - gcc [linux]
+    - libgcc [linux]
+    - clang [osx]
+    - llvm-openmp [osx]
 
   run:
     - python
     - numpy >=1.10  # [py35]
     - numpy >=1.11  # [py36]
     - pytest-astropy
+    - libgcc [linux]
+    - llvm-openmp [osx]
+
 
 test:
   commands:
